@@ -3,6 +3,10 @@
 
 import React from 'react'
 
+// Сделать самостоятельно не смог. Толком не понял задания и как иммено нужно сделать.
+// Открыл final файл и разбирался уже по выполненному заданию.
+// Было бы круто, обсудить это задание и сделать его совместно.
+
 function useLocalStorageState(
   key,
   defaultValue = '',
@@ -11,8 +15,6 @@ function useLocalStorageState(
   const [state, setState] = React.useState(() => {
     const valueInLocalStorage = window.localStorage.getItem(key)
     if (valueInLocalStorage) {
-      // the try/catch is here in case the localStorage value was set before
-      // we had the serialization in place (like we do in previous extra credits)
       try {
         return deserialize(valueInLocalStorage)
       } catch (error) {

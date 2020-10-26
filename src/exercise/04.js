@@ -42,7 +42,6 @@ function Board() {
   }
 
   function restart() {
-    console.log('restart')
     setSquares(Array(9).fill(null))
     // 🐨 set the squares to `Array(9).fill(null)`
   }
